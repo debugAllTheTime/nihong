@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本9日深度游 - 从成都出发的完美行程</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Microsoft YaHei", sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .overview {
+            background: white;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .overview h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .overview p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .timeline {
+            margin: 40px 0;
+        }
+        
+        .day {
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .day:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+            padding: 25px 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .day-number {
+            background: rgba(255,255,255,0.3);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+        }
+        
+        .day-content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .section h4 {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+        
+        .notice {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .notice h3 {
+            color: #f59e0b;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .notice ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .notice li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .notice li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .overview, .day-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌸 日本9日深度游</h1>
+        <p>成都出发 • 大阪进东京出 • 体验日本精华景点</p>
+    </div>
+    
+    <div class="container">
+        <div class="overview">
+            <h2>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                行程概览
+            </h2>
+            <p>
+                本次9天8晚的日本深度游，从成都出发，大阪进东京出。行程涵盖<span class="highlight">东京迪士尼</span>、<span class="highlight">京都古都</span>、<span class="highlight">奈良公园</span>、<span class="highlight">大阪环球影城</span>等必去景点，
+                特别安排<span class="highlight">花火大会</span>观赏，品尝正宗<span class="highlight">神户牛肉</span>，同时游览镰仓、箱根、富士急等特色景点。
+                住宿精选600元人民币以下的优质酒店，确保旅途舒适且经济实惠。
+            </p>
+        </div>
+        
+        <div class="timeline">
+            <!-- 第一天 -->
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-number">1</div>
+                    <span>成都 → 大阪 → 京都</span>
+                </div>
+                <div class="day-content">
+                    <div class="section">
+                        <h4>✈️ 交通安排</h4>
+                        <p>12:20 从成都天府机场T2出发，经神户中转，预计15:00到达（票价：616元）<br>
+                        抵达后乘坐JR新快速列车前往京都（约30分钟，560日元）</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏛️ 景点游览</h4>
+                        <p>游览京都清水寺（开放时间：6:00-18:30，本堂门票：500日元）</p>
+                    </div>
+                    <div class="section">
+                        <h4>🍜 餐饮推荐</h4>
+                        <p>晚餐品尝京都特色拉面</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏨 住宿安排</h4>
+                        <p>The M's Kyoto酒店（近鸭川，交通便利，含免费行李寄存）</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 第二天 -->
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-number">2</div>
+                    <span>京都深度游</span>
+                </div>
+                <div class="day-content">
+                    <div class="section">
+                        <h4>🚌 交通安排</h4>
+                        <p>京都市内公交、地铁</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏛️ 景点游览</h4>
+                        <p>上午：京都国立博物馆（9:30-17:00，周五延长至20:00）<br>
+                        下午：漫步传统街区，感受古都风情</p>
+                    </div>
+                    <div class="section">
+                        <h4>🥩 餐饮推荐</h4>
+                        <p>晚餐：京都ダイニング正義品尝神户牛肉（人均5000-6000日元）<br>
+                        地址：京都市中京区河原町，需预约（电话：050-5456-7751）</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏨 住宿安排</h4>
+                        <p>继续入住The M's Kyoto酒店</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 第三天 -->
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-number">3</div>
+                    <span>京都 → 奈良</span>
+                </div>
+                <div class="day-content">
+                    <div class="section">
+                        <h4>🚆 交通安排</h4>
+                        <p>JR奈良线或近铁京都线（约40分钟，620-710日元）</p>
+                    </div>
+                    <div class="section">
+                        <h4>🦌 景点游览</h4>
+                        <p>奈良公园（全天开放，免费）<br>
+                        东大寺大殿（门票：600日元）<br>
+                        春日大社（正殿参拜：500日元）<br>
+                        与小鹿互动（鹿饼：200日元/份）</p>
+                    </div>
+                    <div class="section">
+                        <h4>🍱 餐饮推荐</h4>
+                        <p>在奈良公园附近品尝奈良特色料理</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏨 住宿安排</h4>
+                        <p>奈良更纱民宿（近铁奈良站附近，干净整洁）</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 第四天 -->
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-number">4</div>
+                    <span>奈良 → 大阪环球影城</span>
+                </div>
+                <div class="day-content">
+                    <div class="section">
+                        <h4>🚆 交通安排</h4>
+                        <p>近铁奈良线至西九条站，换乘JR梦咲线至环球城站</p>
+                    </div>
+                    <div class="section">
+                        <h4>🎢 景点游览</h4>
+                        <p>日本环球影城全天游玩（开放时间：9:00-20:00，门票：8600日元）<br>
+                        推荐项目：哈利波特魔法世界、小黄人乐园、蜘蛛侠惊魂历险记</p>
+                    </div>
+                    <div class="section">
+                        <h4>🍕 餐饮推荐</h4>
+                        <p>园内各主题餐厅</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏨 住宿安排</h4>
+                        <p>JAKOTEL+Namba（难波心斋桥附近，设施齐全）</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 第五天 -->
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-number">5</div>
+                    <span>大阪 → 神户 → 东京</span>
+                </div>
+                <div class="day-content">
+                    <div class="section">
+                        <h4>🚅 交通安排</h4>
+                        <p>上午：大阪至神户<br>
+                        下午：新干线前往东京（光号/回声号，约3-4小时，13870日元）</p>
+                    </div>
+                    <div class="section">
+                        <h4>⚓ 景点游览</h4>
+                        <p>神户港观光</p>
+                    </div>
+                    <div class="section">
+                        <h4>🥩 餐饮推荐</h4>
+                        <p>午餐：神户铁板烧牛排岩崎（需预约，人均15000日元）<br>
+                        晚餐：东京当地美食</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏨 住宿安排</h4>
+                        <p>浅草吉居酒店（近浅草寺，含洗衣房和免费WiFi）</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 第六天 -->
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-number">6</div>
+                    <span>东京 → 箱根 → 东京</span>
+                </div>
+                <div class="day-content">
+                    <div class="section">
+                        <h4>🚆 交通安排</h4>
+                        <p>小田急线至小田原（90分钟），换乘箱根登山线（15分钟）</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏔️ 景点游览</h4>
+                        <p>芦之湖游船观光<br>
+                        大涌谷地热景观<br>
+                        箱根神社参拜</p>
+                    </div>
+                    <div class="section">
+                        <h4>♨️ 餐饮推荐</h4>
+                        <p>箱根特色温泉蛋、当地料理</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏨 住宿安排</h4>
+                        <p>返回东京，继续入住浅草吉居酒店</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 第七天 -->
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-number">7</div>
+                    <span>东京 → 富士急乐园 → 东京</span>
+                </div>
+                <div class="day-content">
+                    <div class="section">
+                        <h4>🚌 交通安排</h4>
+                        <p>从新宿站乘坐中央高速巴士（约1小时40分钟）</p>
+                    </div>
+                    <div class="section">
+                        <h4>🎢 景点游览</h4>
+                        <p>富士急乐园刺激体验<br>
+                        挑战4座世界级过山车<br>
+                        吉尼斯记录最恐怖鬼屋（慈急综合病院）</p>
+                    </div>
+                    <div class="section">
+                        <h4>🍔 餐饮推荐</h4>
+                        <p>园内餐厅</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏨 住宿安排</h4>
+                        <p>继续入住浅草吉居酒店</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 第八天 -->
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-number">8</div>
+                    <span>东京迪士尼乐园</span>
+                </div>
+                <div class="day-content">
+                    <div class="section">
+                        <h4>🚆 交通安排</h4>
+                        <p>JR京叶线至舞滨站（从东京站约15分钟）</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏰 景点游览</h4>
+                        <p>东京迪士尼乐园全天游玩（9:00-21:00，门票：8400-9900日元）<br>
+                        必玩项目：飞溅山、巨雷山、小小世界<br>
+                        夜间烟花表演不容错过</p>
+                    </div>
+                    <div class="section">
+                        <h4>🍿 餐饮推荐</h4>
+                        <p>园内各主题餐厅，推荐火鸡腿和爆米花</p>
+                    </div>
+                    <div class="section">
+                        <h4>🏨 住宿安排</h4>
+                        <p>继续入住浅草吉居酒店</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 第九天 -->
+            <div class="day">
+                <div class="day-header">
+                    <div class="day-number">9</div>
+                    <span>东京 → 花火大会 → 成都</span>
+                </div>
+                <div class="day-content">
+                    <div class="section">
+                        <h4>🚆 交通安排</h4>
+                        <p>前往花火大会场地（如诹访湖，JR中央本线诹访站步行10分钟）<br>
+                        晚上19:30从成田机场T1出发（票价：1439元）</p>
+                    </div>
+                    <div class="section">
+                        <h4>🎆 景点游览</h4>
+                        <p>观赏夏季花火大会（8月15日诹访湖祭）</p>
+                    </div>
+                    <div class="section">
+                        <h4>🍡 餐饮推荐</h4>
+                        <p>花火大会周边小吃摊（章鱼烧、炒面、刨冰等）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notice">
+            <h3>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                注意事项
+            </h3>
+            <ul>
+                <li>提前预订机票、门票和住宿，特别是迪士尼和环球影城门票</li>
+                <li>注意各景点开放时间和休馆日，合理安排行程</li>
+                <li>携带护照、签证、转换插头、充电宝等必需品</li>
+                <li>遵守日本礼仪规范，在公共场所保持安静</li>
+                <li>神户牛肉餐厅需提前预约，建议出发前确认</li>
+                <li>购买JR Pass可节省新干线费用</li>
+                <li>准备适量日元现金，部分场所不接受信用卡</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
